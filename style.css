@@ -1,0 +1,40 @@
+/* 1 j'imbrique mon code CSS dans un autre code CSS
+cela s'appelle le nesting */
+/*code CSS :  */
+.nav {
+  text-align: right;
+}
+.nav .nav__link {
+  font-size: 15px;
+  padding-left: 30px;
+}
+.nav .nav__link .nav__link--purple {
+  color: #a5b4fc;
+}
+
+
+
+/*2 une fois imbriqué cela donne ceci du SCSS */
+
+.nav {
+  text-align: right;
+  .nav__link {
+    font-size: 15px;
+    padding-left: 30px;
+    .nav__link--purple {
+        color: #a5b4fc;
+  }
+}
+}
+
+/*3 version SASS*/
+/* plus d'acollade beaucoup de tabulations */
+.nav
+  text-align: right
+
+ .nav__link
+    font-size: 15px
+    padding-left: 30px
+
+  .nav__link--purple
+      color: #a5b4fc;
